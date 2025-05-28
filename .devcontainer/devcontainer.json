@@ -15,8 +15,6 @@
                 "jupyter.kernels.excludePythonEnvironments": [
                     "/bin/python3",
                     "/usr/bin/python3",
-                    //     "/caminho/para/seu/kernel_indesejado1_dentro_do_container",
-                //     "nome_do_outro_kernel_indesejado_dentro_do_container"
                 ]
             }
         }
