@@ -1,0 +1,28 @@
+{
+    "name": "Ambiente Dev Raizen",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "GitHub.copilot"
+            ],
+            "settings": {
+                "python.pythonPath": "/home/airflow/.local/bin/python",
+                "jupyter.kernels.excludePythonEnvironments": [
+                    "/bin/python3",
+                    "/usr/bin/python3",
+                    //     "/caminho/para/seu/kernel_indesejado1_dentro_do_container",
+                //     "nome_do_outro_kernel_indesejado_dentro_do_container"
+                ]
+            }
+        }
+    },
+    "mounts": [
+        "source=/home/renato/Documentos/projetos,target=/workspace,type=bind,consistency=cached"
+    ],
+    "workspaceFolder": "/workspace/ambiente_dev_raizen"
+}
