@@ -5,7 +5,7 @@ FROM ${SPARK_IMAGE}
 
 # Instalações como root
 USER root
-WORKDIR ${SPARK_HOME}
+WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
         curl \
