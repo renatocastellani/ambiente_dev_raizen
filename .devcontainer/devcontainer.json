@@ -20,7 +20,7 @@
         }
     },
     "mounts": [
-        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+        "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
     ],
-    "workspaceFolder": "/workspace/ambiente_dev_raizen"
+    "workspaceFolder": "/app"
 }
