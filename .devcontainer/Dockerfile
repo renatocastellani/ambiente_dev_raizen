@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
         python3 \
         python3-pip \
         python3-ipykernel \
+        git \
+        fzf \
     && pip3 install --upgrade pip \
     && pip3 install --no-cache-dir notebook jupyterlab \
 #     && curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
@@ -20,4 +22,6 @@ RUN apt-get update && apt-get install -y \
 #     && apt-get update \
 #     && ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev \
     && chmod -R 777 /opt
-    USER airflow
+
+USER airflow
+

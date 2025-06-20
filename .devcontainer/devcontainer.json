@@ -1,26 +1,39 @@
 {
-    "name": "Ambiente Dev Raizen",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-python.python",
-                "ms-toolsai.jupyter",
-                "GitHub.copilot"
-            ],
-            "settings": {
-                "python.pythonPath": "/home/airflow/.local/bin/python",
-                "jupyter.kernels.excludePythonEnvironments": [
-                    "/bin/python3",
-                    "/usr/bin/python3",
-                ]
-            }
-        }
-    },
-    "mounts": [
-        "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
-    ],
-    "workspaceFolder": "/app"
+  "name": "Ambiente Dev Raizen",
+  // Em vez de "build.dockerfile", passamos o docker-compose
+  "dockerComposeFile": ["docker-compose.yml"],
+
+  // Indica qual serviço será aberto no VS Code
+  "service": "app",
+
+  // Mapeia a pasta do projeto como antes
+  "workspaceFolder": "/app",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
+  ],
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "python.pythonPath": "/home/airflow/.local/bin/python",
+        "jupyter.kernels.excludePythonEnvironments": [
+          "/bin/python3",
+          "/usr/bin/python3"
+        ]
+      }
+    }
+  },
+
+  // Variáveis ou outros ajustes de ambiente do contêiner “app”
+  "containerEnv": {
+    // "AIRFLOW__CORE__DAGS_FOLDER": "/app/dags"
+    // Se o código precisar, você pode definir:
+    "MEMCACHED_HOST": "memcache",
+    "MEMCACHED_PORT": "11211"
+  }
 }

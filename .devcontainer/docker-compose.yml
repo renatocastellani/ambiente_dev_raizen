@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  # Seu contêiner principal, construído a partir do Dockerfile atual
+  app:
+    build: .
+    command: sleep infinity        # ou remova e deixe overrideCommand=true
+    depends_on: [memcache]
+    environment:
+      MEMCACHED_HOST: memcache
+      MEMCACHED_PORT: 11211
+
+  # Sidecar de cache
+  memcache:
+    image: memcached:1.6-alpine
+    command: memcached -m 256 -l 0.0.0.0   # 256 MB e ouvindo em todas as interfaces
+    # A porta fica somente na rede interna compose; não será publicada
+    expose:
+      - "11211"
