@@ -198,6 +198,22 @@ mkdir -p "$(dirname "$OUTPUT_PATH")"
   echo '  "version": "0.2.0",'
   echo '  "configurations": ['
 
+  # 6.0) Config de Iniciar DB Airflow
+  echo '    {'
+  echo '      "name": "Airflow: Iniciar DB do Airflow",'
+  echo '      "type": "python",'
+  echo '      "request": "launch",'
+  echo "      \"python\": \"$PYTHON_PATH\","
+  echo "      \"program\": \"$AIRFLOW_PATH\","
+  echo '      "console": "integratedTerminal",'
+  echo '      "args": ["db", "init"],'
+  echo '      "env": {'
+  echo '        "AIRFLOW__CORE__DAGS_FOLDER": "'"$AIRFLOW__CORE__DAGS_FOLDER"'",'
+  echo '        "AIRFLOW_HOME": "'"/opt"'/airflow",'
+  echo '      }'
+  echo '    },'
+
+  
   # 6.1) Config de Listar DAGs
   echo '    {'
   echo '      "name": "Airflow: Listar DAGs",'
