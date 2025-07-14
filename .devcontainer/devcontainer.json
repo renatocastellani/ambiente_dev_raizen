@@ -37,5 +37,8 @@
     "MEMCACHED_PORT": "11211",
     "ENVIRONMENT": "dev",
     "MEMCACHE_KEY_PREFIX": "dev"
-  }
+  },
+  
+  // Comando para iniciar o db do airflow dev
+  "postStartCommand": "bash /app/.devcontainer/init-airflow.sh"
 }
