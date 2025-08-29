@@ -20,4 +20,5 @@ RUN apt-get update && apt-get install -y \
 #     && apt-get update \
 #     && ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev \
     && chmod -R 777 /opt
-    USER airflow
+
+USER airflow
