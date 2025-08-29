@@ -24,4 +24,3 @@ RUN apt-get update && apt-get install -y \
     && chmod -R 777 /opt
 
 USER airflow
-
