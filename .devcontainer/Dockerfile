@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
         python3 \
         python3-pip \
         python3-ipykernel \
+        git \
+        fzf \
     && pip3 install --upgrade pip \
     && pip3 install --no-cache-dir notebook jupyterlab \
 #     && curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
