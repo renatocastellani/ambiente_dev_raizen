@@ -34,6 +34,7 @@
     // "AIRFLOW__CORE__DAGS_FOLDER": "/app/dags"
     // Se o código precisar, você pode definir:
     "MEMCACHED_HOST": "memcache",
+    "MEMCACHE_HOST": "memcache",
     "MEMCACHED_PORT": "11211",
     "ENVIRONMENT": "dev",
     "MEMCACHE_KEY_PREFIX": "dev"
