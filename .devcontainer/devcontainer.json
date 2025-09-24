@@ -21,6 +21,7 @@
       ],
       "settings": {
         "python.pythonPath": "/home/airflow/.local/bin/python",
+        "python.defaultInterpreterPath": "/usr/local/bin/python3",
         "jupyter.kernels.excludePythonEnvironments": [
           "/bin/python3",
           "/usr/bin/python3"
