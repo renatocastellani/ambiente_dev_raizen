@@ -24,7 +24,29 @@
         "jupyter.kernels.excludePythonEnvironments": [
           "/bin/python3",
           "/usr/bin/python3"
-        ]
+        ],
+        "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+        // Sugestões de customização para diferenciar este devcontainer
+        "workbench.colorCustomizations": {
+          // Barra de status: usar cor forte para fácil identificação
+          // "statusBar.background": "#33483d",
+          // "statusBar.noFolderBackground": "#33483d",
+
+          // Barra lateral e atividade
+          // "sideBar.background": "#071422",
+          // "sideBar.background": "#19241e",
+          // "sideBarSectionHeader.background": "#19241e",
+
+          // Item remoto (Dev Container / WSL / Remote) - usando a cor solicitada
+          // "statusBarItem.remoteBackground": "#60903e",
+          // "statusBarItem.remoteForeground": "#ffffff",
+          // "statusBarItem.prominentBackground": "#60903e",
+          // "statusBarItem.prominentForeground": "#ffffff",
+            // Hover: texto quase branco e fundo cinza levemente mais escuro
+            // "statusBarItem.hoverForeground": "#f6f6f7",
+            // "statusBarItem.hoverBackground": "#385f1c"
+
+        }
       }
     }
   },
