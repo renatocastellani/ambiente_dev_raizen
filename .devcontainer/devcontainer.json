@@ -28,6 +28,14 @@
         "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
         // Sugestões de customização para diferenciar este devcontainer
         "workbench.colorCustomizations": {
+
+          
+          // Barra de título
+          // "titleBar.activeBackground": "#415b4e",
+          // "titleBar.activeForeground": "#e7e7e7",
+          // "titleBar.inactiveBackground": "#415b4e99",
+          // "titleBar.inactiveForeground": "#e7e7e799",
+          
           // Barra de status: usar cor forte para fácil identificação
           // "statusBar.background": "#33483d",
           // "statusBar.noFolderBackground": "#33483d",
