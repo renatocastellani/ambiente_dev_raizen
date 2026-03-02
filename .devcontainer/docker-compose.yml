@@ -5,6 +5,7 @@ services:
   app:
     build: .
     command: sleep infinity        # ou remova e deixe overrideCommand=true
+    network_mode: "host"
     depends_on: [memcache]
     environment:
       MEMCACHED_HOST: memcache
@@ -17,3 +18,4 @@ services:
     # A porta fica somente na rede interna compose; não será publicada
     expose:
       - "11211"
+
