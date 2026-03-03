@@ -64,8 +64,10 @@
   "containerEnv": {
     // "AIRFLOW__CORE__DAGS_FOLDER": "/app/dags"
     // Se o código precisar, você pode definir:
-    "MEMCACHED_HOST": "memcache",
-    "MEMCACHE_HOST": "memcache",
+    "MEMCACHED_HOST": "localhost", // usando o docker compose
+    "MEMCACHE_HOST": "localhost", // usando o docker compose
+    //"MEMCACHED_HOST": "memcache", // usando o ambiente dev
+    //"MEMCACHE_HOST": "memcache", // usando o ambiente dev
     "MEMCACHED_PORT": "11211",
     "ENVIRONMENT": "dev",
     "MEMCACHE_KEY_PREFIX": "dev"
